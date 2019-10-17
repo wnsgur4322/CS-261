@@ -1,0 +1,10 @@
+
+Binary search tree
+http://courses.cs.vt.edu/~cs3114/Fall17/barnette/notes/Tree-Iterators.pdf
+http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/9-BinTree/bin-tree.html
+https://www.geeksforgeeks.org/practice-questions-height-balancedavl-tree/
+https://www.geeksforgeeks.org/avl-tree-set-1-insertion/
+
+A4
+
+https://github.com/strozzi1/Data-Structures-CS261-OSU-/blob/master/assign4/assignment-4-strozzi1/pq.c

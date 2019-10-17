@@ -1,0 +1,28 @@
+CS261 - assignment 2
+Junhyeok Jeong
+Amortized analysis (part 1)
+
+1.How many cost units are spent in the entire process of performing 16 consecutive push operations on an empty array which starts out at capacity 8, assuming that the array will double in capacity each time new item is added to an already full dynamic array? Now try it for 32 consecutive push operations. As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the amortized big-oh complexity for push?
+
+capacity 8 with 8 items - doubled to 16 - copy 8 for new capacity = 16 units
+16 consecutive push operations total cost: 8+16 = 24
+
+After this, 16 capacity of the array -> doubled to 32 -> copy 16 for new capacity = 32 units
+32consecutive push operations total cost: 24+32 = 56
+
+Both amortized Big-O complexicty for push is O(1)+
+
+2.How many cost units are spent in the entire process of performing 16 consecutive push operations on an empty array which starts out at capacity 8, assuming that the array will grow by a constant 2 spaces each time new item is added to an already full dynamic array? Now try it for 32 consecutive push operations. As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the amortized big-oh complexity for push?
+
+add 2 = 2 spaces each time new item is added
+
+capaciy 8 with 8 itmes -> (add 2 capacity 2+8 = 10 -> copy 8 and add 2, 10) -> (add 2 and make 12 -> copy 10 and add 2, 12) -> (add 2 and make 14 -> copy 12 and add 2, 14) -> (add 2 and make 16 -> copy 14 and add 2, 16)
+
+16 consecutive push operations total cost: 8+10+12+14+16 = 60
+
+After this, (add 2 and make 18 -> copy 16 and add 2, 18) -> (add 2 and make 20 -> copy 18 and add 2, 20) -> (add 2 and make 22 -> copy 20 and add 2, 22) -> (add 2 and make 24 -> copy 22 and add 2, 24) -> (add 2 and make 26 -> copy 24 and add 2, 26) -> (add 2 and make 28 -> copy 26 and add 2, 28) -> (add 2 and make 30 -> copy 28 and add 2, 30) -> (add 2 and make 32 -> copy 30 and add 2, 32)
+
+32 consecutive push operations total cost: 60+18+20+22+24+26+28+30+32 = 260
+
+Both amortized Big-O complexicty for push is O(n)
+
